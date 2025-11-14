@@ -9,8 +9,6 @@ class Produto
 }
 
 $produto1 = new Produto();
-print_r($produto1);
-echo '<br>';
 $produto1->nome = 'alysson';
 $produto1->preco = '31';
 
@@ -22,9 +20,6 @@ class Database
         $env = parse_ini_file($envPath); // transforma o $env em um array com od dados do banco (env.ini), Array ( [host] => localhost [username] => root [password] => [database] => innout )
         $conn = new mysqli($env['host'], $env['username'], $env['password'], $env['database'],);
 
-        print_r($env);
-        echo '<br>';
-
         if ($conn->connect_error) {
             die("Erro: " . $conn->connect_error);
         }
@@ -35,8 +30,6 @@ class Database
     {
         $conn = self::getConnection();
         $result = $conn->query($sql);
-        print_r($result);
-        echo '<br>';
         $conn->close();
         return ($result);
     }
