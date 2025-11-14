@@ -9,3 +9,8 @@ body{
 .form-login{
     flex-basis: 450px;
 }
+
+card-header{
+    display: flex;
+    justify-content: center;
+}

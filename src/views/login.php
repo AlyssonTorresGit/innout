@@ -22,7 +22,7 @@
                 <i class="icofont-runner-alt-1"></i>
             </div>
             <did class="card-body">
-
+                
             </did>
         </div>
     </form> -->
@@ -38,12 +38,12 @@
             <form>
                 <div class="form-group">
                     <label for="emailInput">Endereço de Email</label>
-                    <input type="email" class="form-control" id="emailInput" aria-describedby="emailHelp" placeholder="Seu e-mail" autofocus>
+                    <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Seu e-mail" autofocus>
                     <small id="emailHelp" class="form-text text-muted">Nunca compartilharemos seu email com ninguém.</small>
                 </div>
                 <div class="form-group">
                     <label for="passwordInput">Senha</label>
-                    <input type="password" class="form-control" id="passwordInput" placeholder="Senha">
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Senha">
                 </div>
                 <div class="form-group form-check">
                     <input type="checkbox" class="form-check-input" id="checkMe">
