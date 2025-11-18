@@ -43,6 +43,9 @@ class Model
         return $this->values;
     }
 
+
+
+
     public static function getOne($filters = [], $columns = '*')
     {
         $class = get_called_class();
