@@ -1,20 +1,12 @@
 <?php
-require_once(dirname(__FILE__, 2)  . '/src/config/config.php');
-//o dirname(__FILE__) pega o diretorioa atual, o ,2 retorna duas pastas e, o . concatena(adiciona) com o caminho onde esta o arquivo database.php, onde vai esta as funções que eu preciso.
+require_once(dirname(__FILE__, 2) . '/src/config/config.php');
 
-//require_once(VIEW_PATH . '/login.php'); //define a constante VIEW_PATH com o caminho la no config.php
+$uri = urldecode(
+    parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH)
+);
 
-require_once(MODEL_PATH . '/Login.php');
-
-$login = new Login([
-
-    'email' => 'admin@cod3r.com.br',
-    'password' => 'a'
-]);
-
-try {
-    $login->checkLogin();
-    echo 'deu certo';
-} catch (Exception $e) {
-    echo 'Problema no login ;P';
+if($uri === '/' || $uri === '' ||  $uri === '/index.php') {
+    $uri = '/day_records.php';
 }
+
+require_once(CONTROLLER_PATH . "/{$uri}");
